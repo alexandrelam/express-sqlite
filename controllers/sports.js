@@ -28,6 +28,17 @@ function createSport(req, res, db) {
   res.send("Sport ajouté");
 }
 
+function updateSport(req, res, db) {
+  const sql_update = `UPDATE Sports SET name = ? WHERE id = ?`;
+  db.run(sql_update, [req.body.name, req.params.id], (err) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    console.log(`Modification réussie de la ligne ${this.lastID}`);
+  });
+  res.send("Sport modifié");
+}
+
 function deleteSport(req, res, db) {
   const sql_delete = `DELETE FROM Sports WHERE id = ?`;
   db.run(sql_delete, [req.params.id], (err) => {
@@ -43,5 +54,6 @@ module.exports = {
   listSport,
   sportById,
   createSport,
+  updateSport,
   deleteSport,
 };

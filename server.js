@@ -8,6 +8,7 @@ const {
   listSport,
   sportById,
   createSport,
+  updateSport,
   deleteSport,
 } = require("./controllers/sports");
 const { listStudent, createStudent } = require("./controllers/students");
@@ -23,6 +24,9 @@ app.get("/sports/:id", (req, res) => {
 });
 app.post("/sports", (req, res) => {
   createSport(req, res, db);
+});
+app.put("/sports/:id", (req, res) => {
+  updateSport(req, res, db);
 });
 app.delete("/sports/:id", (req, res) => {
   deleteSport(req, res, db);
