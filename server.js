@@ -13,6 +13,9 @@ const {
 } = require("./controllers/sports");
 const { listStudent, createStudent } = require("./controllers/students");
 
+const logger = require("./middleware/logger");
+app.use(logger);
+
 app.use(bodyParser.json());
 
 //sports routes
