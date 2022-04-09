@@ -23,7 +23,6 @@ function createSport(req, res, db) {
     if (err) {
       return console.error(err.message);
     }
-    console.log(`Ajout réussi de la ligne ${this.lastID}`);
   });
   res.send("Sport ajouté");
 }
@@ -34,7 +33,6 @@ function updateSport(req, res, db) {
     if (err) {
       return console.error(err.message);
     }
-    console.log(`Modification réussie de la ligne ${this.lastID}`);
   });
   res.send("Sport modifié");
 }
@@ -45,7 +43,6 @@ function deleteSport(req, res, db) {
     if (err) {
       return console.error(err.message);
     }
-    console.log(`Suppression réussie de la ligne ${this.lastID}`);
   });
   res.send("Sport supprimé");
 }
