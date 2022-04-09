@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 4000;
 
-const { db } = require("./configureDB");
+const db = require("./configureDB");
 const {
   listSport,
   sportById,

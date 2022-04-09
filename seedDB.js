@@ -1,4 +1,4 @@
-const { db } = require("./configureDB");
+const db = require("./configureDB");
 
 //sql insert student to db
 const sql_insert_student = `INSERT INTO Students(name) VALUES(?)`;

@@ -32,6 +32,4 @@ db.run(sql_create_sport, (err) => {
   console.log("Création réussie de la table 'Sports'");
 });
 
-module.exports = {
-  db,
-};
+module.exports = db;
