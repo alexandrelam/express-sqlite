@@ -3,7 +3,7 @@ function listSport(req, res, db) {
     if (err) {
       return console.error(err.message);
     }
-    res.send(rows);
+    res.json(rows);
   });
 }
 
@@ -13,7 +13,7 @@ function sportById(req, res, db) {
     if (err) {
       return console.error(err.message);
     }
-    res.send(rows);
+    res.json(rows);
   });
 }
 
