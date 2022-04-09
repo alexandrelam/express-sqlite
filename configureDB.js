@@ -8,6 +8,7 @@ const db = new sqlite3.Database(db_name, (err) => {
   console.log("Connexion réussie à la base de données 'apptest.db'");
 });
 
+//create student table
 const sql_create = `CREATE TABLE IF NOT EXISTS Students(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(100) NOT NULL);`;
