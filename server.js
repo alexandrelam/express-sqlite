@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
 const port = 4000;
 
@@ -15,7 +16,7 @@ const { listStudent, createStudent } = require("./controllers/students");
 
 const logger = require("./middleware/logger");
 app.use(logger);
-
+app.use(cors());
 app.use(bodyParser.json());
 
 //sports routes
